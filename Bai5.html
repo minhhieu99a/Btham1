@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+    let ngoisao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let chomsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function findStar(name) {
+        for (let i = 0; i < ngoisao.length; i++) {
+            if (name === ngoisao[i]) {
+                return i;
+            }
+        } return -1;
+    }
+
+    function showConstellaion() {
+        let input = prompt("Nhập ngôi sao bạn muốn tìm : ");
+        if (findStar(input) !== -1) {
+            alert("Ngôi sao" + " " + input + " " + "thuộc chòm sao" + " " + chomsao[findStar(input)]);
+        } else {
+            alert("Không tìm thấy ngôi sao bạn muốn tìm")
+        }
+    }
+
+    showConstellaion();
+</script>
+</body>
+</html>
